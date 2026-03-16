@@ -1,0 +1,92 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=0.55in,bottom=0.55in,left=0.62in,right=0.62in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+\pdfgentounicode=1
+\pagenumbering{gobble}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+\newcommand{\resumeSubheading}[4]{
+  \textbf{#1} \hfill #2\\
+  \emph{#3} \hfill \emph{#4}\\[-6pt]
+}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Xu Hu}}\\[3pt]
+    Ph.D. Student in Computer Science, The University of Texas at Dallas\\[3pt]
+    Richardson, TX, USA \,|\, \href{mailto:xu.hu@utdallas.edu}{xu.hu@utdallas.edu} \,|\, \href{mailto:huxu896@gmail.com}{huxu896@gmail.com} \,|\, \href{https://scholar.google.com/}{Google Scholar}
+\end{center}
+
+% Replace the Google Scholar URL above with your public profile link.
+
+\textbf{Research Interests:} Trustworthy large language models, AI agents, diffusion models, irregular time series, medical image generation
+
+\section*{Education}
+\resumeSubheading
+  {The University of Texas at Dallas}{Richardson, TX, USA}
+  {Ph.D. in Computer Science}{2025 -- Present}
+\resumeSubheading
+  {Anhui University}{Hefei, China}
+  {B.E. in Economic Statistics; GPA: 4.16/5.00; Major GPA: 4.33/5.00; WES: 3.92/4.00; Rank: 1/103}{2021 -- 2025}
+
+\section*{Selected Publications}
+\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
+  \item Xu, H., Yu, J., Xu, Q., Tao, Z. \textit{Volatility Information in High-Frequency Financial Interval-Valued Time Series: A Direct Modeling Pattern}. Fluctuation and Noise Letters, 2024.
+  \item Xu, H. et al. \textit{Application of a Latent Diffusion Model for MRI Generation: Integrating 3D Autoencoder with KL Divergence Loss and a ViT-based Denoising Framework}. IEEE ISBI 2025. First author.
+\end{itemize}
+
+\section*{Research Experience}
+\resumeSubheading
+  {North Carolina State University, ISE Department}{Raleigh, NC, USA}
+  {Student Intern}{Aug 2024 -- Nov 2024}
+\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
+  \item Developed adaptive diffusion models for sparse, irregular, and missing industrial time series; replaced Gaussian noise with Brownian motion-based noise to better match sensor dynamics.
+  \item Built a path-aware Wiener process framework for multi-condition RUL prediction using attention-based condition embeddings, variational inference, and mutual information-guided sensor attention.
+\end{itemize}
+
+\resumeSubheading
+  {HKUST(GZ), Data Science and Analytics Thrust}{Guangzhou, China}
+  {Research Intern}{Jun 2024 -- Aug 2024}
+\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
+  \item Proposed a spatio-temporal selective state space model (ST-Mamba) for traffic flow prediction without explicit graph modeling, capturing long-range dependencies with improved efficiency.
+\end{itemize}
+
+\resumeSubheading
+  {TReNDS Lab, GSU / Georgia Tech / Emory}{Atlanta, GA, USA}
+  {Research Collaborator}{Jun 2024 -- Aug 2024}
+\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
+  \item Built a conditional latent diffusion framework to translate functional connectivity into structural MRI and support subject-specific biomarker identification for schizophrenia.
+\end{itemize}
+
+\resumeSubheading
+  {Anhui University, Department of Big Data and Statistics}{Hefei, China}
+  {Undergraduate Researcher}{Mar 2023 -- Sep 2023}
+\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
+  \item Designed a VAR-NN forecasting model with interval-valued volatility features for high-frequency financial time series, leading to an SCI publication.
+\end{itemize}
+
+\section*{Selected Honors}
+\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
+  \item Finalist, 2023 Mathematical Contest in Modeling (ICM); Global Grand Prize Nomination (top 0.17\%).
+  \item AI Summer School, NTU Singapore: Best Project Award and Excellence Leadership Award, 2023.
+\end{itemize}
+
+\section*{Skills}
+\textbf{Programming:} Python, PyTorch, R, LaTeX \\
+\textbf{Research Areas:} Time-series forecasting, spatio-temporal modeling, diffusion models, statistical learning
+
+\end{document}
