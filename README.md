@@ -3,7 +3,6 @@ This folder contains a one-page research internship resume in Overleaf-friendly 
 Use:
 - Upload `resume.tex` to Overleaf.
 - Compile with `pdfLaTeX`.
-- Replace the placeholder Google Scholar URL in the header with your public profile link.
 
 Current emphasis:
 - Ph.D.-level research identity at UT Dallas
