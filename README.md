@@ -1,10 +1,10 @@
-This folder contains a one-page research internship resume in Overleaf-friendly LaTeX.
+This repository contains an Overleaf-friendly LaTeX version of the original PDF CV.
 
 Use:
 - Upload `resume.tex` to Overleaf.
 - Compile with `pdfLaTeX`.
 
-Current emphasis:
-- Ph.D.-level research identity at UT Dallas
-- Publications and research internships first
-- Non-research items trimmed to keep the resume to one page
+Notes:
+- The structure follows the original PDF CV rather than the earlier condensed one-page resume.
+- The photo is removed.
+- The header keeps the provided Google Scholar link.

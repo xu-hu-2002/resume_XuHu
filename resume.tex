@@ -1,90 +1,251 @@
-\documentclass[10pt,letterpaper]{article}
+%-------------------------
+% CV in Latex
+% Adapted from a resume template provided by the user
+%------------------------
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[top=0.55in,bottom=0.55in,left=0.62in,right=0.62in]{geometry}
-\usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
-\usepackage{tabularx}
-\usepackage{xcolor}
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
 \usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[scale=0.90,lf]{FiraMono}
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\usepackage{tgheros}
+\usepackage[T1]{fontenc}
 
-\pdfgentounicode=1
-\pagenumbering{gobble}
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+\renewcommand*\familydefault{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
 \urlstyle{same}
-\setlength{\parindent}{0pt}
-\setlength{\tabcolsep}{0pt}
 
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{5pt}{3pt}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+    \bfseries \vspace{2pt} \raggedright \large
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-1pt}}}
+}
 
 \newcommand{\resumeSubheading}[4]{
-  \textbf{#1} \hfill #2\\
-  \emph{#3} \hfill \emph{#4}\\[-6pt]
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\
+      \textit{#3} & {\color{dark-grey} \small #4}\\
+    \end{tabular*}\vspace{-4pt}
 }
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey} #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
 
 \begin{document}
 
 \begin{center}
-    {\LARGE \textbf{Xu Hu}}\\[3pt]
-    Ph.D. Student in Computer Science, The University of Texas at Dallas\\[3pt]
-    Richardson, TX, USA \,|\, \href{mailto:xu.hu@utdallas.edu}{xu.hu@utdallas.edu} \,|\, \href{mailto:huxu896@gmail.com}{huxu896@gmail.com} \,|\, \href{https://scholar.google.com/citations?user=4LvTffEAAAAJ&hl=en}{Google Scholar}
+    \textbf{\Huge Xu Hu} \\ \vspace{5pt}
+    \small Former Senior Undergraduate @ AHU / Visiting Student @ NCSU \\
+    \small Ph.D. Student @ UT Dallas \\ \vspace{4pt}
+    \small \faEnvelope \hspace{2pt} \texttt{\href{mailto:xu.hu@utdallas.edu}{xu.hu@utdallas.edu} / \href{mailto:huxu896@gmail.com}{huxu896@gmail.com}} \hspace{1pt} $|$
+    \hspace{1pt} \faGraduationCap \hspace{2pt} \href{https://scholar.google.com/citations?user=4LvTffEAAAAJ&hl=en}{\myuline{Google Scholar}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Richardson, TX, USA}
+    \\ \vspace{-3pt}
 \end{center}
 
-\textbf{Research Interests:} Trustworthy large language models, AI agents, diffusion models, irregular time series, medical image generation
+\section{EDUCATION BACKGROUND}
+  \resumeSubHeadingListStart
 
-\section*{Education}
-\resumeSubheading
-  {The University of Texas at Dallas}{Richardson, TX, USA}
-  {Ph.D. in Computer Science}{2025 -- Present}
-\resumeSubheading
-  {Anhui University}{Hefei, China}
-  {B.E. in Economic Statistics; GPA: 4.16/5.00; Major GPA: 4.33/5.00; WES: 3.92/4.00; Rank: 1/103}{2021 -- 2025}
+    \resumeSubheading
+      {The University of Texas at Dallas, Texas, U.S.A.}{2025 -- 2030 (expected)}
+      {Ph.D. Student, Department of Computer Science}{Richardson, TX, USA}
+      \resumeItemListStart
+        \resumeItem{Advisors: Associate Professor Feng Chen and Assistant Professor Bingze Li}
+        \resumeItem{Research Interests: large language model hallucination, trustworthiness, and agents}
+      \resumeItemListEnd
 
-\section*{Selected Publications}
-\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
-  \item Xu, H., Yu, J., Xu, Q., Tao, Z. \textit{Volatility Information in High-Frequency Financial Interval-Valued Time Series: A Direct Modeling Pattern}. Fluctuation and Noise Letters, 2024.
-  \item Xu, H. et al. \textit{Application of a Latent Diffusion Model for MRI Generation: Integrating 3D Autoencoder with KL Divergence Loss and a ViT-based Denoising Framework}. IEEE ISBI 2025. First author.
-\end{itemize}
+    \resumeSubheading
+      {Anhui University (Project ``211''), Hefei, China}{2021 -- 2025}
+      {B.E. in Economic Statistics, Department of Big Data and Statistics}{Hefei, China}
+      \resumeItemListStart
+        \resumeItem{Overall GPA: 4.16/5.00; Major GPA: 4.33/5.00; WES: 3.92/4.00; Major Rank: 1/103 (Top 0.95\%)}
+        \resumeItem{Main Courses: Mathematical Analysis I \& II (90, 94), Advanced Algebra (87), Probability and Mathematical Statistics (89), Operations Research (97), Statistics (94), Bayesian Statistics (100), R Programming (95), Python Programming (95), Data Mining (93), Applied Statistical Analysis (95), Statistical Forecasting and Decision (96), Intermediate Econometrics (96), Time Series (91)}
+      \resumeItemListEnd
 
-\section*{Research Experience}
-\resumeSubheading
-  {North Carolina State University, ISE Department}{Raleigh, NC, USA}
-  {Student Intern}{Aug 2024 -- Nov 2024}
-\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
-  \item Developed adaptive diffusion models for sparse, irregular, and missing industrial time series; replaced Gaussian noise with Brownian motion-based noise to better match sensor dynamics.
-  \item Built a path-aware Wiener process framework for multi-condition RUL prediction using attention-based condition embeddings, variational inference, and mutual information-guided sensor attention.
-\end{itemize}
+  \resumeSubHeadingListEnd
 
-\resumeSubheading
-  {HKUST(GZ), Data Science and Analytics Thrust}{Guangzhou, China}
-  {Research Intern}{Jun 2024 -- Aug 2024}
-\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
-  \item Proposed a spatio-temporal selective state space model (ST-Mamba) for traffic flow prediction without explicit graph modeling, capturing long-range dependencies with improved efficiency.
-\end{itemize}
+\section{PUBLICATIONS}
+  \begin{enumerate}[leftmargin=0.22in, itemsep=2pt, topsep=2pt]
+    \small
+    \item Hu Xu, Yu Jianwen, Xu Qin, Tao Zhifu, ``Volatility information in high-frequency financial interval-valued time series: A direct modeling pattern,'' \textit{Fluctuation and Noise Letters}, 2024. SCI.
+    \item ``Application of a Latent Diffusion Model for MRI Generation: Integrating 3D Autoencoder with KL Divergence Loss and a ViT-based Denoising Framework,'' \textit{IEEE ISBI 2025}, first author.
+  \end{enumerate}
 
-\resumeSubheading
-  {TReNDS Lab, GSU / Georgia Tech / Emory}{Atlanta, GA, USA}
-  {Research Collaborator}{Jun 2024 -- Aug 2024}
-\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
-  \item Built a conditional latent diffusion framework to translate functional connectivity into structural MRI and support subject-specific biomarker identification for schizophrenia.
-\end{itemize}
+\section{RESEARCH EXPERIENCE}
+  \resumeSubHeadingListStart
 
-\resumeSubheading
-  {Anhui University, Department of Big Data and Statistics}{Hefei, China}
-  {Undergraduate Researcher}{Mar 2023 -- Sep 2023}
-\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
-  \item Designed a VAR-NN forecasting model with interval-valued volatility features for high-frequency financial time series, leading to an SCI publication.
-\end{itemize}
+    \resumeSubheading
+      {ISE, Edward P. Fitts Department, North Carolina State University}{Aug. 2024 -- Nov. 2024}
+      {Student Intern, under the supervision of Prof. Xiaolei Fang and Prof. Shu-Cherng Fang}{Raleigh, NC, USA}
 
-\section*{Selected Honors}
-\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt]
-  \item Finalist, 2023 Mathematical Contest in Modeling (ICM); Global Grand Prize Nomination (top 0.17\%).
-  \item AI Summer School, NTU Singapore: Best Project Award and Excellence Leadership Award, 2023.
-\end{itemize}
+      \resumeProjectHeading
+        {\textbf{Adaptive Diffusion Models for Industrial Irregular Time Series Analysis}}{}
+        \resumeItemListStart
+          \resumeItem{Applied conditional diffusion models to sparse, irregular, and missing time-series data in industrial settings.}
+          \resumeItem{Implemented domain adaptation by replacing Gaussian noise with Brownian motion-based noise to match real-world sensor data characteristics.}
+        \resumeItemListEnd
 
-\section*{Skills}
-\textbf{Programming:} Python, PyTorch, R, LaTeX \\
-\textbf{Research Areas:} Time-series forecasting, spatio-temporal modeling, diffusion models, statistical learning
+      \resumeProjectHeading
+        {\textbf{Path-Aware Wiener Process Framework for RUL Prediction}}{}
+        \resumeItemListStart
+          \resumeItem{Developed a novel deep learning framework combining an attention mechanism with a Wiener process for multi-condition remaining useful life prediction.}
+          \resumeItem{Designed a path-aware embedding module to capture operating-condition transitions and duration effects through an attention mechanism.}
+          \resumeItem{Implemented variational inference to model unit-to-unit degradation patterns and mutual information-based sensor attention.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Science and Analytics Thrust, HKUST Guangzhou}{Jun. 2024 -- Aug. 2024}
+      {Research Intern, under the supervision of Prof. Yuxuan Liang and Prof. Zhengyang Zhou}{Guangzhou, China}
+
+      \resumeProjectHeading
+        {\textbf{Spatio-Temporal Selective State Space (ST-Mamba) Model for Traffic Flow Prediction}}{}
+        \resumeItemListStart
+          \resumeItem{Developed a spatio-temporal model without explicit graph modeling.}
+          \resumeItem{Effectively captured long-range dependencies in traffic flow data.}
+          \resumeItem{Employed the Mamba block to improve computational efficiency and prediction accuracy.}
+          \resumeItem{Conducted ablation studies and derived new observations about state space models.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {TReNDS Lab, ECE, GSU / Georgia Tech / Emory}{Jun. 2024 -- Aug. 2024}
+      {Collaborated with Ph.D. student Yuda Bi; under the supervision of Prof. Vince D. Calhoun}{Atlanta, GA, USA}
+
+      \resumeProjectHeading
+        {\textbf{Functional-to-Structural MRI Image Translation based on Conditional Latent Diffusion: Biomarker Identification for Schizophrenia}}{}
+        \resumeItemListStart
+          \resumeItem{Utilized an improved Diffusion Transformer (DiT) to achieve reverse generation from functional network connectivity (FNC) to gray matter (GM).}
+          \resumeItem{Introduced the FNC matrix as a condition in the DiT model to guide the GM generation process.}
+          \resumeItem{Explored subject-specific biomarkers for schizophrenia using both functional and structural MRI data.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Department of Big Data and Statistics, Anhui University}{Mar. 2023 -- Sep. 2023}
+      {Undergraduate Research Project, under the supervision of Prof. Zhifu Tao}{Hefei, China}
+
+      \resumeProjectHeading
+        {\textbf{Volatility Information in High-Frequency Financial Interval-Valued Time Series: A Direct Modeling Pattern}}{}
+        \resumeItemListStart
+          \resumeItem{Developed a novel VAR-NN forecasting model combining a vector autoregressive process, volatility information, and neural networks.}
+          \resumeItem{Introduced four types of interval-valued data volatility information for more accurate predictions.}
+          \resumeItem{Outperformed traditional methods in forecasting high-frequency financial data.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {College of Computing and Data Science, NTU Singapore}{Jul. 2023 -- Aug. 2023}
+      {AI Summer School; Best Project Award; Excellence Leadership Award}{Singapore}
+
+      \resumeProjectHeading
+        {\textbf{Location-based Demand Prediction and Resource Optimization System for California Bike-sharing}}{}
+        \resumeItemListStart
+          \resumeItem{Built a system for real-time prediction and optimization of dynamic demand in bike-sharing systems.}
+          \resumeItem{Improved resource allocation efficiency and enhanced user experience.}
+          \resumeItem{Supported smart urban transportation management with multidimensional data-driven decision-making.}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{COMPETITION AWARDS}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {2023 ICM -- American Undergraduate Mathematical Modeling Competition, Finalist}{Feb. 2023}
+      {Proposed a solution on network science and operations research}{Global Grand Prize Nomination (top 0.17\%)}
+      \resumeItemListStart
+        \resumeItem{Applied canonical correlation analysis to the United Nations' 17 Sustainable Development Goals.}
+        \resumeItem{Used advanced econometric methods to analyze factors influencing progress.}
+        \resumeItem{Utilized an LSTM to predict achievable goals over the next decade.}
+        \resumeItem{Concluded with a sensitivity analysis, affirming the robustness of the model.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{HONORARY \& LEADERSHIP}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+      \textbf{Student Assistant of the President, Anhui University} \hfill {\color{dark-grey} Jun. 2022 -- Jun. 2023} \\
+      The first junior undergraduate selected.
+    }}
+    \small{\item{
+      \textbf{Honors} : Outstanding Student Award, Academic Excellence Award, etc.
+    }}
+    \small{\item{
+      \textbf{Membership} : SWE - Society of Women Engineers
+    }}
+ \end{itemize}
+
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Professional Qualification} : ACCA (2022): Passed BA, MA, FA; BEC Medium \vspace{2pt} \\
+     \textbf{Computer Skills} : Python, R, PyTorch, LaTeX
+    }}
+ \end{itemize}
 
 \end{document}
